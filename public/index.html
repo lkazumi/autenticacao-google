@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login with Google</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 10%;
+        text-align: center;
+        font-family: "Open Sans";
+        background: #f8f8f8;
+      }
+
+      .block {
+        padding: 50px 20px;
+        background: #ffffff;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+          0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        width: 330px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* Estilos para o botão personalizado do Google Sign-In */
+      .custom-google-btn {
+        display: inline-block;
+        background-color: #4285f4;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .custom-google-btn:hover {
+        background-color: #3367d6;
+      }
+
+      .custom-google-btn:active {
+        background-color: #2b5bc5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">
+      <div class="custom-google-btn" onclick="redirectToGoogleSignIn()">
+        Entrar com Google
+      </div>
+    </div>
+
+    <script>
+      function redirectToGoogleSignIn() {
+        // Redireciona para a rota /auth/google
+        window.location.href = "/auth/google";
+      }
+    </script>
+  </body>
+</html>
